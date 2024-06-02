@@ -13,9 +13,10 @@ function App() {
       <ChakraProvider>
         <BrowserRouter>
           <Routes>
-            <Route errorElement={<ErrorPage />} path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog/:slug" element={<Post />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
       </ChakraProvider>

@@ -7,14 +7,16 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <div className="w-full relative bg-black text-base text-white font-poppins">
+    <>
+      <div className="w-full relative h-full text-base text-white font-poppins">
         <Header />
         <Banner />
-        <MovieSection />
-        <MovieSection1 />
-        <Footer />
+        <div className="bg-black">
+          <MovieSection />
+          {/* <MovieSection1 />
+          <Footer /> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
