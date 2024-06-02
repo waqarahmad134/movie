@@ -1,58 +1,26 @@
-import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
-import Desktop from "./pages/Desktop";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import About from "./pages/About";
 import Post from "./pages/Post";
+import Home from "./pages/Home";
+import ErrorPage from "./errors/error-page";
+import { ToastContainer } from "react-toastify";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
-  const action = useNavigationType();
-  console.log("🚀 ~ App ~ action:", action)
-  const location = useLocation();
-  const pathname = location.pathname;
-  console.log("🚀 ~ App ~ pathname:", pathname)
-
-  useEffect(() => {
-    if (action !== "POP") {
-      window.scrollTo(0, 0);
-    }
-  }, [action, pathname]);
-
-  useEffect(() => {
-    let title = "";
-    let metaDescription = "";
-
-    switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-
   return (
-    <Routes>
-      <Route path="/" element={<Desktop />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blog/:slug" element={<Post />} />
-    </Routes>
+    <div>
+      <ToastContainer />
+      <ChakraProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route errorElement={<ErrorPage />} path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog/:slug" element={<Post />} />
+          </Routes>
+        </BrowserRouter>
+      </ChakraProvider>
+    </div>
   );
 }
+
 export default App;

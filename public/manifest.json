@@ -1,0 +1,25 @@
+{
+  "short_name": "3D Breakout",
+  "name": "3D Breakout - High-Quality 3D Models for Architecture and Interior Design",
+  "icons": [
+    {
+      "src": "/images/s-favicon-32x32.png",
+      "sizes": "32x32 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/s-favicon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/images/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

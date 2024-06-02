@@ -1,33 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        black: "#000",
-        white: "#fff",
-        red: "#ff0000",
-        gainsboro: "#d9d9d9",
-      },
-      spacing: {},
       fontFamily: {
         poppins: "Poppins",
       },
-      borderRadius: {
-        mini: "15px",
-        "8xs": "5px",
-        "3xs": "10px",
-        xl: "20px",
+      backgroundImage: {
+        exteriorHeroBg: "url('/images/hero.jpg')",
+        heroSectionBg: "url('/images/herobg.jpg')",
+        "payment-bg": "url('/images/payment-bg.webp')",
       },
     },
-    fontSize: {
-      "5xl": "24px",
-      base: "16px",
-      xs: "12px",
-      inherit: "inherit",
-    },
   },
-  corePlugins: {
-    preflight: false,
-  },
+  plugins: [],
 };
