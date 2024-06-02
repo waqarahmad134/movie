@@ -9,7 +9,7 @@ export default function MovieSection() {
   const waqar = [1, 2, 33, 5, 6, 7, 8];
   return (
     <>
-      <div className="py-16 w-11/12 m-auto">
+      <div className="py-6 md:py-16 w-11/12 m-auto">
         <div className="pb-10 flex justify-between">
           <h2 className="text-xl md:text-3xl font-medium">Recently Updated</h2>
           <div className="flex flex-row items-center justify-start gap-[8px] text-lg md:text-2xl">
