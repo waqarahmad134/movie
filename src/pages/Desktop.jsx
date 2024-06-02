@@ -17,11 +17,7 @@ const Desktop = () => {
         <Link to={`/blog/waqar`}>waqar</Link>
         <div className="relative font-semibold">Country</div>
       </div>
-      <div className="absolute top-[36px] left-[885px] flex flex-row items-start justify-start gap-[16px]">
-        <div className="relative font-semibold">Movies</div>
-        <div className="relative font-semibold">Series</div>
-        <div className="relative font-semibold">Animation</div>
-      </div>
+   
      
       
      
