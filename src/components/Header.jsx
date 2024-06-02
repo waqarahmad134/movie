@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <>
-      <div className="text-white bg-black bg-opacity-50 absolute ">
-        <div className="flex justify-between items-center gap-2 w-11/12 m-auto">
+      <div className="text-white bg-black bg-opacity-50 absolute w-full">
+        <div className="flex justify-between items-center gap-2 w-11/12 m-auto py-3">
           <div>
             <img className="w-60" src="logo.png" alt="logo" />
           </div>
-          <div className="min-w-80">
-            <form className=" min-w-80 relative ">
+          <div className="w-80">
+            <form className="relative">
               <input
                 value="search"
                 type="search"
@@ -25,12 +25,12 @@ export default function Header() {
                 className="flex items-center justify-center gap-2 rounded-full text-black text-sm bg-white h-6 absolute top-2 right-2 hover:text-[#fe8133] duration-200 px-3"
               >
                 <IoIosSearch />
-                <span>Search</span>
+                <span className="hidden md:block">Search</span>
               </button>
             </form>
           </div>
         </div>
-        <div className="bg-black">
+        <div className="bg-black hidden md:block">
           <nav className="flex flex-wrap items-center gap-x-2 [&>a]:border-r [&>a]:p-3  ">
             <Link to={"/about"} className="relative font-semibold">
               Home

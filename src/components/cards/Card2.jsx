@@ -3,38 +3,43 @@ import React from "react";
 export default function Card2() {
   return (
     <div>
-      <div className="w-[352px] relative h-[341px]">
+      <div className="relative space-y-5">
+        <div className="absolute top-[11px] w-full">
+          <div className="rounded-sm flex flex-row justify-between p-5 box-border gap-[4px]">
+            <div className="flex items-center gap-3">
+              <img
+                className="w-[15px] relative h-3.5"
+                alt=""
+                src="/vector5.svg"
+              />
+              <div className="relative">8.0</div>
+            </div>
+            <div className="flex items-center gap-3">
+              <img
+                className="w-[13.3px] relative h-[13.3px] object-contain"
+                alt=""
+                src="/vector1.svg"
+              />
+              <div className="relative font-medium">3:12:00</div>
+            </div>
+          </div>
+        </div>
         <img
-          className="absolute top-[0px] left-[0px] rounded-3xs w-[352px] h-[293px] object-cover"
+          className="rounded-md aspect-[4/2] object-cover"
           alt=""
           src="/rectangle-3@2x.png"
         />
-        <div className="absolute top-[303px] left-[0px] text-5xl font-semibold">
-          Medellin
+        <div className="flex items-center justify-between ">
+          <h2 className="text-xl md:text-2xl font-semibold">Medellin</h2>
+          <div className="flex items-center justify-end gap-3">
+            <div className="rounded-md bg-red-500  p-2">
+              <span className="relative">Action</span>
+            </div>
+            <div className="rounded-md bg-red-500 p-2">
+              <span className="relative">Comedy</span>
+            </div>
+          </div>
         </div>
-        <div className="absolute top-[301px] left-[187px] rounded-3xs bg-red flex flex-row items-start justify-start p-2">
-          <div className="relative">Action</div>
-        </div>
-        <div className="absolute top-[301px] left-[267px] rounded-3xs bg-red flex flex-row items-start justify-start p-2">
-          <div className="relative">Comedy</div>
-        </div>
-        <div className="absolute top-[11px] left-[302px] rounded-3xs w-[34px] h-[26px] flex flex-row items-center justify-center p-2 box-border gap-[4px]">
-          <img className="w-[15px] relative h-3.5" alt="" src="/vector5.svg" />
-          <div className="relative">8.0</div>
-        </div>
-        <div className="absolute top-[8px] left-[16px] rounded-3xs flex flex-row items-center justify-center p-1 gap-[8px]">
-          <img
-            className="w-[13.3px] relative h-[13.3px] object-contain"
-            alt=""
-            src="/vector1.svg"
-          />
-          <div className="relative font-medium">3:12:00</div>
-        </div>
-        <img
-          className="absolute top-[117px] left-[146px] w-[59px] h-[59px]"
-          alt=""
-          src="/vector6.svg"
-        />
       </div>
     </div>
   );
