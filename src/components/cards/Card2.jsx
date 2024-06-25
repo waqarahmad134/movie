@@ -4,7 +4,7 @@ export default function Card2() {
   return (
     <div>
       <div className="relative space-y-5">
-        <div className="absolute top-[11px] w-full">
+        <div className="absolute top-[11px] w-full z-20 ">
           <div className="rounded-sm flex flex-row justify-between p-5 box-border gap-[4px]">
             <div className="flex items-center gap-3">
               <img
@@ -24,11 +24,13 @@ export default function Card2() {
             </div>
           </div>
         </div>
-        <img
-          className="rounded-md aspect-[4/2] object-cover"
-          alt=""
-          src="/rectangle-3@2x.png"
-        />
+        <div className="h-48 overflow-hidden rounded-md">
+          <img
+            className=" aspect-[4/2] object-cover hover:scale-110 ease-in"
+            alt=""
+            src="/rectangle-3@2x.png"
+          />
+        </div>
         <div className="flex items-center justify-between ">
           <h2 className="text-xl md:text-2xl font-semibold">Medellin</h2>
           <div className="flex items-center justify-end gap-3">

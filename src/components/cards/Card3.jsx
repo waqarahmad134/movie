@@ -4,13 +4,13 @@ export default function Card3(props) {
   return (
     <>
       <div className="space-y-3 cursor-pointer">
-        <div className="relative">
+        <div className="relative card3">
           <img
             className="rounded-md aspect-[9/12] object-cover"
             alt={props?.name}
             src="/rectangle-6@2x.png"
           />
-          <div className="h-full w-full bg-yellow-100"></div>
+          <span className="hidden absolute top-0 h-full w-full bg-black bg-opacity-50"></span>
         </div>
         <div className="flex flex-row items-center justify-between w-full">
           <h2 className="relative font-medium">{props?.name || "Movie"}</h2>

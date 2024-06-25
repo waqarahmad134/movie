@@ -8,7 +8,7 @@ export default function Header() {
       <div className="text-white bg-black bg-opacity-50 absolute w-full">
         <div className="flex justify-between items-center gap-2 w-11/12 m-auto py-3">
           <div>
-            <img className="w-60" src="logo.png" alt="logo" />
+            <img className="w-60 rounded" src="logo.png" alt="logo" />
           </div>
           <div className="w-80">
             <form className="relative">
